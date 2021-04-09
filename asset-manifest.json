@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/calculator_jogorku_kenesh/static/css/main.c1afd694.chunk.css",
-    "main.js": "/calculator_jogorku_kenesh/static/js/main.43de441e.chunk.js",
-    "main.js.map": "/calculator_jogorku_kenesh/static/js/main.43de441e.chunk.js.map",
-    "runtime-main.js": "/calculator_jogorku_kenesh/static/js/runtime-main.38260419.js",
-    "runtime-main.js.map": "/calculator_jogorku_kenesh/static/js/runtime-main.38260419.js.map",
-    "static/js/2.7ddde282.chunk.js": "/calculator_jogorku_kenesh/static/js/2.7ddde282.chunk.js",
-    "static/js/2.7ddde282.chunk.js.map": "/calculator_jogorku_kenesh/static/js/2.7ddde282.chunk.js.map",
-    "static/js/3.7615bffb.chunk.js": "/calculator_jogorku_kenesh/static/js/3.7615bffb.chunk.js",
-    "static/js/3.7615bffb.chunk.js.map": "/calculator_jogorku_kenesh/static/js/3.7615bffb.chunk.js.map",
-    "index.html": "/calculator_jogorku_kenesh/index.html",
-    "static/css/main.c1afd694.chunk.css.map": "/calculator_jogorku_kenesh/static/css/main.c1afd694.chunk.css.map",
-    "static/js/2.7ddde282.chunk.js.LICENSE.txt": "/calculator_jogorku_kenesh/static/js/2.7ddde282.chunk.js.LICENSE.txt"
+    "main.css": "/calculator_local_kenesh/static/css/main.c1afd694.chunk.css",
+    "main.js": "/calculator_local_kenesh/static/js/main.ab9e1313.chunk.js",
+    "main.js.map": "/calculator_local_kenesh/static/js/main.ab9e1313.chunk.js.map",
+    "runtime-main.js": "/calculator_local_kenesh/static/js/runtime-main.fb0e9e5c.js",
+    "runtime-main.js.map": "/calculator_local_kenesh/static/js/runtime-main.fb0e9e5c.js.map",
+    "static/js/2.7401ac4a.chunk.js": "/calculator_local_kenesh/static/js/2.7401ac4a.chunk.js",
+    "static/js/2.7401ac4a.chunk.js.map": "/calculator_local_kenesh/static/js/2.7401ac4a.chunk.js.map",
+    "static/js/3.c51b439a.chunk.js": "/calculator_local_kenesh/static/js/3.c51b439a.chunk.js",
+    "static/js/3.c51b439a.chunk.js.map": "/calculator_local_kenesh/static/js/3.c51b439a.chunk.js.map",
+    "index.html": "/calculator_local_kenesh/index.html",
+    "static/css/main.c1afd694.chunk.css.map": "/calculator_local_kenesh/static/css/main.c1afd694.chunk.css.map",
+    "static/js/2.7401ac4a.chunk.js.LICENSE.txt": "/calculator_local_kenesh/static/js/2.7401ac4a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.38260419.js",
-    "static/js/2.7ddde282.chunk.js",
+    "static/js/runtime-main.fb0e9e5c.js",
+    "static/js/2.7401ac4a.chunk.js",
     "static/css/main.c1afd694.chunk.css",
-    "static/js/main.43de441e.chunk.js"
+    "static/js/main.ab9e1313.chunk.js"
   ]
 }
