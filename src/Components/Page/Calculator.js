@@ -80,14 +80,14 @@ const Calculator = () => {
 	return (
 		<div>
 			<SelectBox
-				title={"В каком городе вы будете голосовать?"}
+				title={"Выберите город:"}
 				answers={regions}
 				returnAnswer={returnAnswer}
 			/>
 			{countVoters !== 0 && <div>
 				<MySlider
 					returnAnswer={returnPrecentOfVoters}
-					title={"Выберите явку"}/>
+					title={"Выберите явку:"}/>
 				<div style={{margin: 30}}>
 					<p className={classes.paragraph}>
 						Столько людей проголосует в этом городе с указанной вами явкой:<br/><h3
