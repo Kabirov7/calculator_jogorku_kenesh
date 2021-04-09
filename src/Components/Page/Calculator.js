@@ -108,11 +108,12 @@ const Calculator = () => {
 					title={"Выберите явку"}/>
 				<div style={{margin: 30}}>
 					<p className={classes.paragraph}>
-						Столько голосов надо набрать одной партии, чтобы пройти в кенеш указанного вами
-						города:<br/><h3 className={classes.largerText}>{Math.ceil(countVotersPrec)}</h3>
+						Столько людей проголосует в этом городе с указанной вами явкой:<br/><h3
+						className={classes.largerText}>{Math.ceil(countVotersPrec)}</h3>
 					</p>
 					<p className={classes.paragraph}>
-						Вот столько набрать надо:<br/><h3 className={classes.largerText}>{votes}</h3>
+						Столько голосов надо набрать одной партии, чтобы пройти в кенеш указанного вами города:<br/><h3
+						className={classes.largerText}>{votes}</h3>
 					</p>
 				</div>
 			</div>
