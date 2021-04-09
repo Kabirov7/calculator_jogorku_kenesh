@@ -61,9 +61,12 @@ const Calculator = () => {
 	}, []);
 
 	useEffect(() => {
-		setCountVotersPrec((countVoters / 100) * precent);
+		let countVoters11 = countVoters;
+		let precent11 = precent;
+		// debugger
+		setCountVotersPrec((countVoters * precent) / 100 + 1);
 		// Надо там X умножить на явку и потом умножить на 0.07
-		setVotes(Math.ceil(countVoters * precent * 0.07))
+		setVotes(Math.ceil(countVoters * (precent/100) * 0.07))
 	}, [countVoters, precent])
 
 	const returnAnswer = answer => {
