@@ -91,7 +91,7 @@ const Calculator = () => {
 				<div style={{margin: 30}}>
 					<p className={classes.paragraph}>
 						Столько людей проголосует в этом городе с указанной вами явкой:<br/><h3
-						className={classes.largerText}>{Math.ceil(countVotersPrec)}</h3>
+						className={classes.largerText}>{precent!=0 ?Math.ceil(countVotersPrec) : 0}</h3>
 					</p>
 					<p className={classes.paragraph}>
 						Столько голосов надо набрать одной партии, чтобы пройти в кенеш указанного вами города:<br/><h3
