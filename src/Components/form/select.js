@@ -50,7 +50,8 @@ const SelectBox = (props) => {
 	const handleChange = (event) => {
 		setValue(event.target.value);
 		const value = answers.map((item, id) => {
-			if (item.region === event.target.value) {
+			if (item.city === event.target.value) {
+				console.log(item.count)
 				return item.count
 			}
 		})

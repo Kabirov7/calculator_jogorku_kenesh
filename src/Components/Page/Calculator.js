@@ -54,6 +54,7 @@ const Calculator = () => {
 		const db = firebase.firestore();
 		db.collection("regions").doc("cities")
 			.onSnapshot((doc) => {
+				console.log(doc.data().cities)
 				setRegions(doc.data().cities);
 			});
 
@@ -61,7 +62,8 @@ const Calculator = () => {
 
 	useEffect(() => {
 		setCountVotersPrec((countVoters / 100) * precent);
-		setVotes(Math.ceil((Math.ceil(countVoters * precent / 100)) / 2 + 1))
+		// Надо там X умножить на явку и потом умножить на 0.07
+		setVotes(Math.ceil(countVoters * precent * 0.07))
 	}, [countVoters, precent])
 
 	const returnAnswer = answer => {
@@ -90,7 +92,7 @@ const Calculator = () => {
 					</p>
 					<p className={classes.paragraph}>
 						Столько голосов надо набрать одной партии, чтобы пройти в кенеш указанного вами города:<br/><h3
-						className={classes.largerText}>{votes}</h3>
+						className={classes.largerText}>{(precent != 0 ) ? votes : 0}</h3>
 					</p>
 				</div>
 			</div>
