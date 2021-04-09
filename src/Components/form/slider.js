@@ -6,7 +6,20 @@ const useStyles = makeStyles({
 		paddingTop: "25px",
 	},
 	typography: {
-		fontSize: "18px"
+		margin: "0 0 5px 0 ",
+		padding: 0,
+		fontFamily: "PT Serif",
+		fontSize: "22px",
+		fontWeight: 700,
+		['@media (max-width:780px)']: {
+			fontSize: 19
+		},
+		['@media (max-width:500px)']: {
+			fontSize: 17
+		},
+		['@media (max-width:350px)']: {
+			fontSize: 15
+		}
 	},
 });
 
@@ -22,9 +35,9 @@ export default function MySlider(props) {
 
 
 	return (<div className={classes.root} style={{fontFamily: "Roboto"}}>
-			<Typography className={classes.typography} variant="h6" component="p">
+			<p className={classes.typography} variant="h6" component="p">
 				{title}
-			</Typography>
+			</p>
 			<Grid container spacing={2} alignItems="center">
 				<Grid item xs>
 					<Slider

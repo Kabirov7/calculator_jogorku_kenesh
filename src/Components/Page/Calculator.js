@@ -5,8 +5,37 @@ import {Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-	typography: {
-		fontSize: "18px"
+	paragraph: {
+		margin: "20px 0 5px 0 ",
+		padding: 0,
+		fontFamily: "PT Serif",
+		fontWeight: 500,
+		fontSize: "19px",
+		['@media (max-width:780px)']: {
+			fontSize: 17
+		},
+		['@media (max-width:500px)']: {
+			fontSize: 15
+		},
+		['@media (max-width:350px)']: {
+			fontSize: 13
+		}
+	},
+	largerText: {
+		margin: "5px 0 5px 0 ",
+		padding: 0,
+		fontFamily: "PT Serif",
+		fontWeight: 900,
+		fontSize: "24px",
+		['@media (max-width:780px)']: {
+			fontSize: 22
+		},
+		['@media (max-width:500px)']: {
+			fontSize: 20
+		},
+		['@media (max-width:350px)']: {
+			fontSize: 19
+		}
 	}
 }));
 
@@ -77,13 +106,15 @@ const Calculator = () => {
 				<MySlider
 					returnAnswer={returnPrecentOfVoters}
 					title={"Выберите явку"}/>
-
-				<Typography className={classes.typography} variant="h6" component="p">
-					Вот столько ребят придёт с такой явкой {countVotersPrec}
-				</Typography>
-				<Typography className={classes.typography} variant="h6" component="p">
-					Вот столько набрать надо {votes}
-				</Typography>
+				<div style={{margin: 30}}>
+					<p className={classes.paragraph}>
+						Столько голосов надо набрать одной партии, чтобы пройти в кенеш указанного вами
+						города:<br/><h3 className={classes.largerText}>{Math.ceil(countVotersPrec)}</h3>
+					</p>
+					<p className={classes.paragraph}>
+						Вот столько набрать надо:<br/><h3 className={classes.largerText}>{votes}</h3>
+					</p>
+				</div>
 			</div>
 			}
 		</div>

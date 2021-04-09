@@ -4,7 +4,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
-import {Input, MenuItem, Select, Typography} from "@material-ui/core";
+import {Input, MenuItem, Select} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
@@ -13,12 +13,34 @@ const useStyles = makeStyles((theme) => ({
 	formControl: {
 		marginTop: "30px",
 		margin: "0 auto",
-		textAlign: "left",
+		width: "90%",
+		['@media (max-width:780px)']: {
+			width: "100%"
+		},
 	},
-	typography: {
-		fontSize: "18px"
+	header: {
+		margin: "0 0 5px 0 ",
+		padding: 0,
+		fontFamily:"PT Serif",
+		fontWeight: 900,
+		fontSize: "22px",
+		['@media (max-width:780px)']: {
+			fontSize: 19
+		},
+		['@media (max-width:500px)']: {
+			fontSize: 17
+		},
+		['@media (max-width:350px)']: {
+			fontSize: 15
+		}
+	},
+	item: {
+		fontFamily:"PT Serif",
+		padding: 0,
+		margin: 0,
 	}
 }));
+
 const SelectBox = (props) => {
 	const [value, setValue] = React.useState('');
 	const [open, setOpen] = React.useState(false);
@@ -28,7 +50,7 @@ const SelectBox = (props) => {
 	const handleChange = (event) => {
 		setValue(event.target.value);
 		const value = answers.map((item, id) => {
-			if (item.region === event.target.value){
+			if (item.region === event.target.value) {
 				return item.count
 			}
 		})
@@ -44,11 +66,11 @@ const SelectBox = (props) => {
 
 	return (
 		<div className={classes.formControl}>
-			<Typography className={classes.typography} variant="h6" component="p">
+			<p className={classes.header}>
 				{title}
-			</Typography>
-			<div style={{paddingTop:15}}>
-				<FormControl style={{width:"40%"}}>
+			</p>
+			<div style={{paddingTop: 15}}>
+				<FormControl style={{width: "40%"}}>
 					<Select
 						open={open}
 						value={value}
@@ -59,7 +81,9 @@ const SelectBox = (props) => {
 					>
 						{answers.map((item, id) => (
 							<MenuItem value={item.region}>
+								<p className={classes.item}>
 								{item.region}
+								</p>
 							</MenuItem>))}
 					</Select>
 				</FormControl>
