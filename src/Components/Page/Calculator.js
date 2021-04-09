@@ -3,6 +3,7 @@ import SelectBox from "../form/select";
 import MySlider from "../form/slider";
 import {Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
+import firebase from "./../../utils/firebase";
 
 const useStyles = makeStyles((theme) => ({
 	paragraph: {
@@ -49,37 +50,13 @@ const Calculator = () => {
 
 
 	useEffect(() => {
-		const regions = [
-			// {region: 'Айдаркен', count: 10},
-			// {region: 'Базар-Коргон', count: 10},
-			{region: 'Балыкчы', count: 29740},
-			{region: 'Баткен', count: 15514},
-			{region: 'Бишкек', count: 417570},
-			{region: 'Джалал-Абад', count: 49603},
-			// {region: 'Исфанин', count: 10},
-			// {region: 'Кадамжай', count: 10},
-			// {region: 'Каинды', count: 10},
-			// {region: 'Кант', count: 10},
-			{region: 'Каракол', count: 38985},
-			{region: 'Кара-Куль', count: 15624},
-			// {region: 'Кемин', count: 10},
-			// {region: 'Кербен', count: 10},
-			// {region: 'Кок-Жангак', count: 10},
-			// {region: 'Кочкор-Атин', count: 10},
-			{region: 'Кызыл-Кия', count: 30436},
-			{region: 'Майлуу-Суу', count: 12765},
-			{region: 'Нарын', count: 30955},
-			// {region: 'Ноокат', count: 10},
-			// {region: 'Узген', count: 10},
-			// {region: 'Орлов', count: 10},
-			{region: 'Ош', count: 151239},
-			{region: 'Сулюкта', count: 10804},
-			{region: 'Талас', count: 21926},
-			{region: 'Токмок', count: 38578},
-			// {region: 'Чолпон-Атин', count: 10},
-			// {region: 'Шопоков', count: 10}
-		]
-		setRegions(regions)
+
+		const db = firebase.firestore();
+		db.collection("regions").doc("cities")
+			.onSnapshot((doc) => {
+				setRegions(doc.data().cities);
+			});
+
 	}, []);
 
 	useEffect(() => {

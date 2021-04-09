@@ -80,9 +80,9 @@ const SelectBox = (props) => {
 						input={<Input id="grouped-select"/>}
 					>
 						{answers.map((item, id) => (
-							<MenuItem value={item.region}>
+							<MenuItem value={item.city}>
 								<p className={classes.item}>
-								{item.region}
+								{item.city}
 								</p>
 							</MenuItem>))}
 					</Select>
